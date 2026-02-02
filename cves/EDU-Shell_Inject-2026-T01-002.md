@@ -1,4 +1,4 @@
-🔹 CVE ID: EDU-WEBLAB-2026-T01-002
+🔹 CVE ID: EDU-Shell_Inject-T01-002
 🔹 Title : OS Command Injection in Shell‑Inject Ping Function
 
 🔹 Affected Lab and Component

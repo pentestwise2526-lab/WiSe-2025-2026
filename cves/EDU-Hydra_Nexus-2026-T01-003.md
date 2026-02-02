@@ -1,4 +1,4 @@
-CVE ID: EDU-WEBLAB-2026-T01-003
+CVE ID: EDU-Hydra_Nexus-2026-T01-003
 
 Title: Unauthorized Access to Administrative Panel in Hydra-Nexus
 

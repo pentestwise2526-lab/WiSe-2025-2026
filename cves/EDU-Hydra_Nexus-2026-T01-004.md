@@ -1,4 +1,4 @@
-CVE ID: EDU-WEBLAB-2026-T01-004
+CVE ID: EDU-Hydra_Nexus-2026-T01-004
 
 Title: Insecure Direct Object Reference in Hydra-Nexus User Details Endpoint
 
