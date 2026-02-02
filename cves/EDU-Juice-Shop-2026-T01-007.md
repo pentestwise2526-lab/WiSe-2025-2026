@@ -1,4 +1,5 @@
 🔹 CVE ID : EDU-Juice-Shop-2026-T01-007
+
 🔹 Title: JWT Role Manipulation Leading to Privilege Escalation
 
 🔹 Affected Lab and Component:
