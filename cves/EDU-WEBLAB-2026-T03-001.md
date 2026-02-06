@@ -14,6 +14,10 @@ A null byte (`%2500`) is a special character that ends a string. When added to a
 **Proof of Concept**:  
 ![After Accessing ftp engpoint](image.png)
 
+![Initial file Access](image-1.png)
+
+![Files Accessed](image-2.png)
+
 Payload 1: `http://[JuiceshopIP:port]/ftp/`  
 Effect: Accesses ftp endpoint
 
