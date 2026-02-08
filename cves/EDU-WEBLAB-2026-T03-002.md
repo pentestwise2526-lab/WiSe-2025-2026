@@ -1,18 +1,19 @@
-**CVE-ID**: EDU-WEBLAB-2026-T03-002
+**CVE-ID**: EDU-WEBLAB-2026-T03-002  
 **Title**: Anonymous FTP Access  
-**Affected Lab**: gravemind
-**Component**: vsftpd 3.0.3 (FTP service on port 21) 
+**Affected Lab**: gravemind  
+**Component**: vsftpd 3.0.3 (FTP service on port 21)  
 **Severity**: High  
-**CVSS Vector**: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N 
+**CVSS Vector**: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  
 **CVSS Score**: 7.5  
+
 
 **Description**:  
 The vsftpd service on gravemind permits anonymous FTP login with unrestricted read access to sensitive files. The file `supersecretfile.txt` contains a hard-coded plaintext password ("password") that may be reused for SSH, SMB, or web application authentication on this host, enabling privilege escalation and lateral movement.
 
 **Proof of Concept**:  
-![nmap scan](image-3.png)
+<img src="image-3.png" alt="nmap scan" width="800">
 
-![ftp file access](image-4.png)
+<img src="image-4.png" alt="ftp file access" width="800">
 
 Payload 1: `nmap -sV -sC -T5 -p- [gravemindIP]`  
 Effect: scans IP and test vulnerability scripts, detect versions on all open ports with insane speed
