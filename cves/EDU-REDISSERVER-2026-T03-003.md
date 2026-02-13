@@ -1,7 +1,7 @@
 **CVE-ID**: EDU-REDISSERVER-2026-T03-003  
 **Title**: Unauthenticated Redis Server Running as Root Enabling Remote Code Execution via Module Loading  
 **Affected Lab**: Redis-Server  
-**Component**: vsftpd 3.0.3 (FTP service on port 21)  
+**Component**: Reddis 5.0.7 
 **Severity**: Critical  
 **CVSS Vector**: AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H  
 **CVSS Score**: 10.0  
