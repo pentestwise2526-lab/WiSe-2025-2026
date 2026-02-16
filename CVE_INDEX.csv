@@ -1,3 +1,13 @@
 CVE ID,Title,Team,Lab,Severity,CVSS Score,Status,Reviewer Notes
-EDU-WEBLAB-2026-T01-001,Reflected Cross-Site Scripting (XSS) in DVWA Profile Page,Team 01,DVWA,Medium,6.1,Pending Review,
-EDU-WEBLAB-2026-T01-002,OS Command Injection in DVWA Ping Functionality,Team 01,DVWA,Critical,9.8,Pending Review,
+EDU-PHANTOM-SCRIPT-2026-T01-001,Reflected Cross-Site Scripting (XSS) in Phantom-Script Profile Endpoint,Team 1,Phantom-Script,Medium,6.1,Pending Review,
+EDU-SHELL-INJECT-2026-T01-002,OS Command Injection in Shell-Inject Ping Function,Team 1,Shell-Inject,Critical,9.8,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-003,Unauthorized Access to Administrative Panel in Hydra-Nexus,Team 1,Hydra-Nexus,Critical,9.1,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-004,Insecure Direct Object Reference (IDOR) in Hydra-Nexus User Details Endpoint,Team 1,Hydra-Nexus,High,7.5,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-005,SQL Injection Authentication Bypass in Hydra-Nexus Login Username Field,Team 1,Hydra-Nexus,Critical,9.8,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-006,Sensitive Information Disclosure in Hydra-Nexus Admin Control Panel,Team 1,Hydra-Nexus,High,7.5,Pending Review,
+EDU-JUICE-SHOP-2026-T01-007,Broken Authentication via JWT Role Manipulation in OWASP Juice Shop,Team 1,OWASP Juice Shop,High,8.1,Pending Review,
+EDU-JUICE-SHOP-2026-T01-008,Broken Object Level Authorization (IDOR) in OWASP Juice Shop Basket API,Team 1,OWASP Juice Shop,High,7.5,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-009,Improper File Upload Validation and Public Access to Uploaded Files in Hydra-Nexus,Team 1,Hydra-Nexus,High,7.5,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-010,Chained OS Command Injection Enabling Root Command Execution in Hydra-Nexus,Team 1,Hydra-Nexus,Critical,9.8,Pending Review,
+EDU-HYDRA-NEXUS-2026-T01-011,Insecure Python Pickle Deserialization Leading to Blind Remote Code Execution in Hydra-Nexus,Team 1,Hydra-Nexus,Critical,9.8,Pending Review,
+EDU-MAZE-WALKER-2026-T01-012,Path Traversal Leading to Arbitrary File Read in Maze-Walker Application,Team 1,Maze-Walker,High,7.5,Pending Review
