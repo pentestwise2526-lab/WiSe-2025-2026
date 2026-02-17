@@ -13,8 +13,11 @@ The application uses Python's `pickle.loads()` to deserialize user-controlled da
 
 **Proof of Concept**:  
 
-Payload :
+<img width="800" height="201" alt="T03-06-1" src="https://github.com/user-attachments/assets/6a609558-4c0a-47dc-aa37-843f793b7b02" />
 
+<img width="800" height="251" alt="T03-06-2" src="https://github.com/user-attachments/assets/de1ecff2-0766-483f-a646-44bd6158894e" />
+
+Payload :
 ```python
 import pickle
 import base64
