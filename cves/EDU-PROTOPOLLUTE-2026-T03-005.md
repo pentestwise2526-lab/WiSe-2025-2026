@@ -11,9 +11,9 @@ The settings update functionality is vulnerable to Server-Side Prototype Polluti
 
 **Proof of Concept**:  
 
-<img src="image-9.png" alt="user enum" width="800">
+<img width="800" height="521" alt="image-9" src="https://github.com/user-attachments/assets/561d15e5-3f4c-4f03-a7cf-16e7a1479558" />
 
-Payload:
+Payload:  
 ```json
 {
   "__proto__": {
