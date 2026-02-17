@@ -12,11 +12,12 @@ The Juice Shop application is vulnerable to a Path Traversal attack using the Po
 A null byte (`%2500`) is a special character that ends a string. When added to a URL, it makes the server stop reading at that point. This can trick the system into ignoring anything after the null byte, letting you bypass extension checks or restrictions.
 
 **Proof of Concept**:  
-![After Accessing ftp engpoint](image.png)
 
-![Initial file Access](image-1.png)
+<img width="800" height="427" alt="image" src="https://github.com/user-attachments/assets/ce3542b6-cafe-424d-88d5-e4e6f2c9dd3f" />
 
-![Files Accessed](image-2.png)
+<img width="800" height="698" alt="image-1" src="https://github.com/user-attachments/assets/ff37fd0e-fd5c-4211-a406-36c31bba6637" />
+
+<img width="800" height="695" alt="image-2" src="https://github.com/user-attachments/assets/b071ec63-8332-418a-b302-148733432bf6" />
 
 Payload 1: `http://[JuiceshopIP:port]/ftp/`  
 Effect: Accesses ftp endpoint
