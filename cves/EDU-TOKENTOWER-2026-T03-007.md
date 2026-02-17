@@ -13,7 +13,9 @@ The Token Tower application uses JSON Web Tokens (JWT) for session management wi
 
 **Proof of Concept**:  
 
+<img width="800" height="728" alt="T03-07-1" src="https://github.com/user-attachments/assets/02d4f446-0067-47d6-9a6d-2414c72db0dd" />
 
+<img width="800" height="366" alt="T03-07-2" src="https://github.com/user-attachments/assets/81ae0540-4987-4d7f-b2a3-971e6eeae461" />
 
 Payload :
 ```python
