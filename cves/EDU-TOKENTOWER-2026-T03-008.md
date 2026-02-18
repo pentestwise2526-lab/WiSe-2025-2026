@@ -13,7 +13,9 @@ The Token Tower application accepts JWT tokens with the `alg` header set to `"no
 
 **Proof of Concept**:  
 
+<img width="1050" height="728" alt="T03-07-1" src="https://github.com/user-attachments/assets/8714a6a7-f360-400c-b3dc-b0254ccd5e15" />
 
+<img width="1050" height="527" alt="T03-08-1" src="https://github.com/user-attachments/assets/c5344820-884b-4ab7-8a1c-5fe0e3b2fa7c" />
 
 Payload :
 ```python
