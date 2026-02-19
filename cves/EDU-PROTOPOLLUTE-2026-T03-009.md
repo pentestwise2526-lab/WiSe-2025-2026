@@ -17,9 +17,11 @@ The application is vulnerable to DOM Clobbering because it uses window.config as
 An attacker can inject HTML to overwrite the config.scriptUrl property, forcing the application to load a malicious script
 
 **Proof of Concept:**
+
 <img width="873" height="627" alt="Screenshot 2026-02-19 at 06-26-22 Client-Side Logic Lab" src="https://github.com/user-attachments/assets/0e7a4dc6-a6c8-4913-b855-640f4a8ba70f" />
 
 **Payload:**
+
 <img width="370" height="68" alt="image" src="https://github.com/user-attachments/assets/18f53c82-34f5-4d4f-96c5-20b720da55a7" />
 
 
