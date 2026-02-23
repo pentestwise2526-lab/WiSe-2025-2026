@@ -1,4 +1,4 @@
- CVE ID: EDU-WEBLAB-2026-T01-001
+ CVE ID: EDU-phantom_script-2026-T01-001
  
 Title: Reflected Cross‑Site Scripting (XSS) in Phantom‑Script Profile Endpoint
 
