@@ -13,6 +13,10 @@ The Werkzeug interactive debugger console was accessible at the `/console` endpo
 
 **Proof of Concept**:  
 
+<img width="866" height="170" alt="T03-10-1" src="https://github.com/user-attachments/assets/05246deb-1d38-46d5-b263-7711dae36618" />
+
+<img width="866" height="208" alt="T03-10-2" src="https://github.com/user-attachments/assets/d396ecaa-cb59-4027-a52c-b53780fc6665" />
+
 Payload:
  ```python
  #for RCE
