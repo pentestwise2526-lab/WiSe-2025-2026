@@ -1,0 +1,85 @@
+🔹 Title
+
+Server‑Side Template Injection in Render Function
+
+
+🔹 Affected Lab and Component
+
+Lab Name: WebSploit Render‑Reign
+
+Component: Template Rendering Engine
+
+Endpoint: /render (or main input submission endpoint)
+
+Parameter: User input field (template/message parameter)
+
+Container: websploit-render-reign
+
+Port: 5021
+
+
+🔹 Vulnerability Classification
+
+CWE: CWE‑94 – Improper Control of Generation of Code (‘Code Injection’)
+
+OWASP Top 10: A03:2021 – Injection
+
+
+🔹 CVSS v3.1 Score
+
+Score: 9.0 (Critical)
+
+Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+🔹 Description
+
+The Render‑Reign application dynamically renders user‑supplied input within a server‑side template engine without proper sanitization or sandboxing.
+
+Because the application directly evaluates template expressions provided by users, an attacker can inject template syntax that is executed on the server. This behavior enables attackers to execute arbitrary expressions, access internal objects, and potentially achieve remote code execution depending on the template engine configuration.
+
+
+🔹 Exploitation Steps
+
+1. Open the Render‑Reign lab in a browser.
+
+2. Locate the input field that renders user content.
+
+3. Enter a template expression:
+
+{{7*7}}
+
+4. Submit the input.
+
+5. Observe that the application returns 49, confirming server‑side evaluation.
+
+
+🔹 Proof of Concept (PoC)
+
+POST /render HTTP/1.1
+Host: localhost:5021
+Content-Type: application/x-www-form-urlencoded
+
+input={{7*7}}
+
+Response:
+49
+
+
+🔹 Impact
+
+Successful exploitation may allow:
+
+* Execution of arbitrary template expressions
+* Access to sensitive server objects and configuration
+* Potential remote code execution
+* Data exposure and full application compromise
+
+
+🔹 Remediation
+
+* Avoid rendering raw user input as templates
+* Treat user input strictly as data, not executable content
+* Implement template sandboxing and strict variable binding
+* Apply input validation and output encoding
+* Conduct security testing for injection vulnerabilities
